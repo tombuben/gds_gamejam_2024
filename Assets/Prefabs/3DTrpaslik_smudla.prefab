@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog: {fileID: 8604011750088633603}
   mainPlayer: {fileID: 0}
-  speed: 0
+  speed: 4
 --- !u!143 &4103152452755978310
 CharacterController:
   m_ObjectHideFlags: 0
