@@ -12,8 +12,8 @@ public class CharacterKiller : MonoBehaviour
         GetComponent<CharacterController3D>().enabled = false;
         transform.Translate(Vector3.back * 10f);
         transform.DORotate(new Vector3(0,0,90f), 3f);
-        transform.DOMoveY(transform.position.y - 10f, 2f);
-        transform.DOMoveX(transform.position.x + 5f, 2f);
+        transform.DOMoveY(transform.position.y - 20f, 3f);
+        transform.DOMoveX(transform.position.x + 5f, 3f);
         
         GlobalManager.Instance.PlayerKilled?.Invoke();
     }

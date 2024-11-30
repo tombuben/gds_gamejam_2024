@@ -5,14 +5,15 @@ public class CharacterControllerSwitcher : MonoBehaviour
 {
     private CharacterController2D controller2D;
     private CharacterController3D controller3D;
-    private CharacterController controller;
+    private Rigidbody rb;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public IEnumerator Start()
     {
         controller2D = GetComponent<CharacterController2D>();
         controller3D = GetComponent<CharacterController3D>();
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezePositionZ;
         
         controller3D.enabled = false;
         controller2D.enabled = true;
@@ -25,7 +26,7 @@ public class CharacterControllerSwitcher : MonoBehaviour
     {
         controller3D.enabled = is3D;
         controller2D.enabled = !is3D;
-        controller.attachedRigidbody.constraints = is3D ? RigidbodyConstraints.FreezePositionZ : RigidbodyConstraints.None;
+        rb.constraints = is3D ? RigidbodyConstraints.FreezePositionZ : RigidbodyConstraints.None;
     }
 
 }

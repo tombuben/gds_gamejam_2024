@@ -79,14 +79,16 @@ public class CharacterController2D : MonoBehaviour
 
     private void CheckCollisions()
     {
-        Physics2D.queriesStartInColliders = false;
-
         // Ground and Ceiling
         bool groundHit = characterController.isGrounded;
         bool ceilingHit =
-            Physics.CapsuleCast(characterController.bounds.center + Vector3.up * (characterController.height / 2.0f),
-                characterController.bounds.center + Vector3.down * (characterController.height / 2.0f),
+            Physics.CapsuleCast(characterController.bounds.center + Vector3.down * (characterController.height / 2.0f + 0.1f),
+                characterController.bounds.center + Vector3.up * (characterController.height / 2.0f - 0.1f),
                 characterController.radius, Vector3.up, _stats.GrounderDistance, LayerMask.GetMask("Ground"));
+
+        Debug.DrawLine(characterController.bounds.center + Vector3.up * (characterController.height / 2.0f + _stats.GrounderDistance),
+            characterController.bounds.center + Vector3.down * (characterController.height / 2.0f - _stats.GrounderDistance), Color.red,
+            Time.deltaTime, false);
 
         // Hit a Ceiling
         if (ceilingHit)
