@@ -33,6 +33,9 @@ public class GlobalManager : MonoBehaviour
     public Action OnHatLost;
     public bool PickedUpHat = false;
 
+    public bool SmudlaIsFollowing;
+    public Action StopSmudlaFollowing;
+
     void Awake()
     {
         Instance = this;
