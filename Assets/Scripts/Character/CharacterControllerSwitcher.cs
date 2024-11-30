@@ -18,9 +18,24 @@ public class CharacterControllerSwitcher : MonoBehaviour
         controller3D.enabled = false;
         controller2D.enabled = true;
         GlobalManager.Instance.OnTogglePerspective += TogglePerspective;
+        
+        GlobalManager.Instance.OnDialogShown += DialogShown;
+        GlobalManager.Instance.OnDialogClosed += DialogHidden;
         yield return null;
         GlobalManager.Instance.PlayerSpawned?.Invoke(this);
     }
+
+    private void DialogShown()
+    {
+        controller3D.enabled = false;
+        controller2D.enabled = false;
+    }
+    
+    private void DialogHidden()
+    {
+        TogglePerspective(GlobalManager.Instance.is3D);
+    }
+
 
     private void TogglePerspective(bool is3D)
     {
