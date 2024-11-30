@@ -34,8 +34,8 @@ public class HatFetchQuest : MonoBehaviour
             
             FirstDialog.DialogFinishedSuccessfully -= UpdateHat;
             FirstDialog.DialogFinishedUnsuccessfully -= UpdateHat;
-            FirstDialog.DialogFinishedSuccessfully += UpdateHatVisuals;
-            FirstDialog.DialogFinishedUnsuccessfully += UpdateHatVisuals;
+            WithHatDialog.DialogFinishedSuccessfully += UpdateHatVisuals;
+            WithHatDialog.DialogFinishedUnsuccessfully += UpdateHatVisuals;
         }
         else
         {
@@ -47,6 +47,8 @@ public class HatFetchQuest : MonoBehaviour
 
     private void UpdateHatVisuals()
     {
+        Debug.Log("Update hat visuals");
+        GlobalManager.Instance.PickedUpHat = false;
         GlobalManager.Instance.OnHatLost?.Invoke();
         hatless.SetActive(false);
         withHat.SetActive(true);
