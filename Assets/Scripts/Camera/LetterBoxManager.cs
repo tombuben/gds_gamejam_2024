@@ -12,7 +12,7 @@ public class LetterBoxManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GlobalManager.Instance.TogglePerspective += TogglePerspective;
+        GlobalManager.Instance.OnTogglePerspective += TogglePerspective;
     }
 
     private void TogglePerspective(bool is3D)

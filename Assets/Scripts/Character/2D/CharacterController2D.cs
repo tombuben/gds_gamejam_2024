@@ -89,7 +89,10 @@ public class CharacterController2D : MonoBehaviour
                 characterController.radius, Vector3.up, _stats.GrounderDistance, LayerMask.GetMask("Ground"));
 
         // Hit a Ceiling
-        if (ceilingHit) _frameVelocity.y = Mathf.Min(0, _frameVelocity.y);
+        if (ceilingHit)
+        {
+            _frameVelocity.y = Mathf.Min(0, _frameVelocity.y);
+        }
 
         // Landed on the Ground
         if (!_grounded && groundHit)

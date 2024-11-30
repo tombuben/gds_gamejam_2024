@@ -23,12 +23,7 @@ public class PerspectiveSwitcher : MonoBehaviour
         orthoOn = true;
         blender = (MatrixBlender) GetComponent(typeof(MatrixBlender));
 
-        GlobalManager.Instance.TogglePerspective += HandleTogglePerspective;
-    }
-
-    void OnDestroy(){
-
-        GlobalManager.Instance.TogglePerspective -= HandleTogglePerspective;
+        GlobalManager.Instance.OnTogglePerspective += HandleTogglePerspective;
     }
 
     void HandleTogglePerspective(bool is3D){
