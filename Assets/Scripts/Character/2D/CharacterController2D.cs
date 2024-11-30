@@ -1,16 +1,20 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterController2D : MonoBehaviour
 {
+    private static readonly int LeftRight = Animator.StringToHash("LeftRight");
     [SerializeField] private ScriptableStats _stats;
+    [SerializeField] private Animator _animator;
 
     private CharacterController characterController;
 
     private FrameInput _frameInput;
     private Vector3 _frameVelocity;
     public Vector2 FrameInput => _frameInput.Move;
+    public Vector2 lookDirection;
 
     private float _time;
 
@@ -24,6 +28,9 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         _time += Time.deltaTime;
+
+        lookDirection = _frameVelocity * 5.0f;
+        _animator.SetFloat(LeftRight, Mathf.Clamp(lookDirection.x, -1f, 1f));
         GatherInput();
     }
 
