@@ -24,6 +24,9 @@ public class DialogInstance : MonoBehaviour
         CurrentDialogIndex = DialogStartIndex;
 
         DialogWindow = GlobalManager.Instance.DialogWindow;
+
+        DialogFinishedUnsuccessfully += () => { CurrentDialogIndex = DialogStartIndex; };
+        DialogFinishedSuccessfully += () => { CurrentDialogIndex = DialogStartIndex; };
     }
 
     private void OnTriggerEnter(Collider other)
@@ -78,7 +81,7 @@ public class DialogInstance : MonoBehaviour
         {
             DialogFinishedSuccessfully?.Invoke();
         }
-        else if (CurrentDialogIndex == -2) // unsuccessfull end of the dialog
+        else if (CurrentDialogIndex <= -2) // unsuccessfull end of the dialog
         {
             DialogFinishedUnsuccessfully?.Invoke();
         }

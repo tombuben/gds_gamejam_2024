@@ -80,14 +80,167 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: bdfbsd
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
+  - character: 5
+    text: What a terrible day I had today.
+    option1Text: Say nothing
+    Option1NextNodeIndex: 2
+    option2Text: Apologize
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: "I\u2019m sorry for jumping, ..."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 17
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: '"First, I lost my new pickaxe. Do you understand? NEW PICK-AXE!"  '
+    option1Text: Try to sympathize
+    Option1NextNodeIndex: 3
+    option2Text: Say nothing
+    Option2NextNodeIndex: 4
+    option3Text: Apologize
+    Option3NextNodeIndex: 5
+  - character: 0
+    text: That must be terrib..
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: And then my own brother told me I have a BIG nose.
+    option1Text: Say nothing
+    Option1NextNodeIndex: 9
+    option2Text: Try to sympathize
+    Option2NextNodeIndex: 7
+    option3Text: Apologize
+    Option3NextNodeIndex: 6
+  - character: 0
+    text: "But still I\u2019m sorry for jumping on ..."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 17
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: That reminds me, sorry for jump..
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 17
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: That seems terrible. You nose is just a little bit lar..
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Did my brother send you? ARGH
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 18
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: I don't have a big nose you know.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 10
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: It's just that I fell on it today, and it got... you know, swollen.
+    option1Text: Say nothing
+    Option1NextNodeIndex: 12
+    option2Text: Apologize
+    Option2NextNodeIndex: 11
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: That's what I wanted to apologize for...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 17
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Ehh, that was good. Needed to get that off my chest.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 13
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Why are you here anyway?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: Apologize
+    Option2NextNodeIndex: 14
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: "'m the one who pushed you off that cliff, and that's why your nose is
+      so big\u2014ee, I meant swollen."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: Apologize
+    Option2NextNodeIndex: 15
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Ahh, you have such a nice manners.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 16
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Apology accepted.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: No, this is the least of my worries.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 18
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 5
+    text: Stop bothering me!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 19
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: But I still need to apologize.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
     Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &8271600863431146711
 SphereCollider:
   m_ObjectHideFlags: 0
