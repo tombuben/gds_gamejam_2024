@@ -21,6 +21,7 @@ public class MatrixBlender : MonoBehaviour
             yield return 1;
         }
         GetComponent<Camera>().projectionMatrix = dest;
+        GlobalManager.Instance.TogglePerspectiveFinished?.Invoke();
     }
 
     public Coroutine BlendToMatrix(Matrix4x4 targetMatrix, float duration)

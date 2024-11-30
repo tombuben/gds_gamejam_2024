@@ -9,7 +9,7 @@ public class PerspectiveRotate : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GlobalManager.Instance.togglePerspective += HandleTogglePerspective;
+        GlobalManager.Instance.TogglePerspective += HandleTogglePerspective;
     }
     
     void HandleTogglePerspective(bool is3D)
