@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1849720941}
   - component: {fileID: 1849720940}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MainText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 13.7402}
+  m_AnchoredPosition: {x: 0, y: 13.7402}
   m_SizeDelta: {x: -170, y: -47.4804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849720940
@@ -1084,11 +1084,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=blue>Hero:</color> This is a hero speaking. I''m the heroin of
-    this story. And this is my sample text.
-
-    If you see this text, please report
-    it to your local authorities, because bug has occured in your build'
+  m_text: <color=blue>Hero:</color> This is a hero speaking. I'm the heroin of this
+    story. And this is my sample text. If you see this text, please report it to
+    your local authorities, because bug has occured in your build
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc289f37ac730bb4dab59e8142659ff4, type: 2}
   m_sharedMaterial: {fileID: -7262035120522024611, guid: fc289f37ac730bb4dab59e8142659ff4, type: 2}
@@ -1178,8 +1176,9 @@ GameObject:
   - component: {fileID: 1982469110}
   - component: {fileID: 1982469112}
   - component: {fileID: 1982469111}
+  - component: {fileID: 1982469113}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DialogPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1246,6 +1245,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982469109}
   m_CullTransparentMesh: 1
+--- !u!114 &1982469113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982469109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4725a5bde8ea819459ca9d04c1fe97b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainText: {fileID: 1849720940}
+  Option1: {fileID: 441174128}
+  Option2: {fileID: 1998546821}
+  Option3: {fileID: 486517473}
 --- !u!1 &1998546819
 GameObject:
   m_ObjectHideFlags: 0
