@@ -6,6 +6,7 @@ public class LetterBoxManager : MonoBehaviour
     public RectTransform leftLetterbox;
     public RectTransform rightLetterbox;
     public RectTransform dialogWindow;
+    public RectTransform score;
     public float duration = 1f;
     public float letterboxWidth = 160;
 
@@ -33,6 +34,11 @@ public class LetterBoxManager : MonoBehaviour
             {
                 dialogWindow.sizeDelta = new Vector2(amount, dialogWindow.sizeDelta.y);
             }, 1220, duration);
+
+            DOTween.To(() => score.position.x, amount =>
+            {
+                score.position = new Vector2(amount, score.position.y);
+            }, 10, duration);
         }
         else
         {
@@ -50,6 +56,11 @@ public class LetterBoxManager : MonoBehaviour
             {
                 dialogWindow.sizeDelta = new Vector2(amount, dialogWindow.sizeDelta.y);
             }, 950, duration);
+
+            DOTween.To(() => score.position.x, amount =>
+            {
+                score.position = new Vector2(amount, score.position.y);
+            }, 250, duration);
         }
     }
 }
