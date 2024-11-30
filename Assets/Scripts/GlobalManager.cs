@@ -25,6 +25,10 @@ public class GlobalManager : MonoBehaviour
     public Action PlayerKilled;
 
     public DialogWindow DialogWindow;
+    
+    public Action OnDialogShown;
+    public Action OnDialogClosed;
+    
 
     void Awake()
     {

@@ -14,6 +14,8 @@ public class DialogInstance : MonoBehaviour
 
     private DialogWindow DialogWindow;
 
+    public Action DialogOpened;
+    
     public Action DialogFinishedSuccessfully;
     public Action DialogFinishedUnsuccessfully;
 
@@ -49,6 +51,7 @@ public class DialogInstance : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            DialogOpened?.Invoke();
             ShowCurrentNode();
         }
     }

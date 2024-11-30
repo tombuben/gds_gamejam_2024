@@ -29,6 +29,7 @@ public class DialogWindow : MonoBehaviour
         string option1text = null, string option2text = null, string option3text = null)
     {
         gameObject.SetActive(true);
+        GlobalManager.Instance.OnDialogShown.Invoke();
 
         // main text
         var characterColor = GetCharacterColor(character);
@@ -66,7 +67,7 @@ public class DialogWindow : MonoBehaviour
         {
             Callback?.Invoke(dialogOption);
         }
-
+        GlobalManager.Instance.OnDialogClosed.Invoke();
     }
 
     private Color GetCharacterColor(Characters character)

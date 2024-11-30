@@ -125,6 +125,8 @@ public class CharacterController3D : MonoBehaviour
             _frameVelocity.z = Mathf.MoveTowards(_frameVelocity.z, _frameInput.Move.y * _stats.MaxSpeed,
                 _stats.Acceleration * Time.fixedDeltaTime);
         }
+        
+        _frameVelocity = Vector3.ClampMagnitude(_frameVelocity, _stats.MaxSpeed);
     }
 
     #endregion
