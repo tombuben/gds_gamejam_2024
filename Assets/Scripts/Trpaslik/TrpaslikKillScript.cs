@@ -36,6 +36,8 @@ public class TrpaslikKillScript : MonoBehaviour
         GlobalManager.Instance.killCount += 1;
         GlobalManager.Instance.TrpaslikKilled?.Invoke();
         isDead = true;
+        
+        Destroy(gameObject, 2f);
     }
 
 }
