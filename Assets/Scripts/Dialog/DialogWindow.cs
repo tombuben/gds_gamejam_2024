@@ -29,7 +29,7 @@ public class DialogWindow : MonoBehaviour
         string option1text = null, string option2text = null, string option3text = null)
     {
         gameObject.SetActive(true);
-        GlobalManager.Instance.OnDialogShown.Invoke();
+        GlobalManager.Instance.OnDialogShown?.Invoke();
 
         // main text
         var characterColor = GetCharacterColor(character);
@@ -46,13 +46,15 @@ public class DialogWindow : MonoBehaviour
         Option2.gameObject.SetActive(option2text != null && option2text != string.Empty);
         Option3.gameObject.SetActive(option3text != null && option3text != string.Empty);
 
-        Option1.Select();
-
         if (!Option1.gameObject.activeSelf && !Option2.gameObject.activeSelf && !Option3.gameObject.activeSelf)
         {
             Option2Text.text = "Continue";
             Option2.gameObject.SetActive(true);
             Option2.Select();
+        }
+        else
+        {
+            Option1.Select();
         }
 
         // callback
@@ -63,11 +65,9 @@ public class DialogWindow : MonoBehaviour
     {
         gameObject.SetActive(false);
 
-        if (Callback != null)
-        {
-            Callback?.Invoke(dialogOption);
-        }
-        GlobalManager.Instance.OnDialogClosed.Invoke();
+        Callback?.Invoke(dialogOption);
+
+        GlobalManager.Instance.OnDialogClosed?.Invoke();
     }
 
     private Color GetCharacterColor(Characters character)
@@ -80,7 +80,7 @@ public class DialogWindow : MonoBehaviour
             case Characters.Princess:
                 return Color.yellow;
             default:
-                return Color.red;
+                return Color.green;
         }
     }
 }
@@ -92,5 +92,5 @@ public enum DialogOptions
 
 public enum Characters
 {
-    Hero, Princess, Gnome1, Gnome2, Gnome3, Gnome4, Gnome5, Gnome6, Gnome7
+    Hero, Princess, Profa, Smudla, Bambule, Cmunda, Drimal, Kejchal, Stydlin
 }
