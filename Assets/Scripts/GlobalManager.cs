@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GlobalManager : MonoBehaviour
 {
     public static GlobalManager Instance;
-
+    
     public bool is3D;
     public Action<bool> OnTogglePerspective; // true when transitioning to 3d
     public Action TogglePerspectiveFinished; // called when transitioning ended
@@ -28,7 +28,10 @@ public class GlobalManager : MonoBehaviour
     
     public Action OnDialogShown;
     public Action OnDialogClosed;
-    
+
+    public Action OnHatPickedUp;
+    public Action OnHatLost;
+    public bool PickedUpHat = false;
 
     void Awake()
     {
