@@ -21,6 +21,7 @@ public class GlobalManager : MonoBehaviour
     public int apologizeCount;
     public Action TrpaslikApologized;
 
+    public Action<CharacterControllerSwitcher> PlayerSpawned;
     public Action PlayerKilled;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

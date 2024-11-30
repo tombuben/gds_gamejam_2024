@@ -9,7 +9,7 @@ public class TrpaslikKillScript : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!isDead && other.gameObject.layer == LayerMask.GetMask("Player"))
+        if (!isDead && other.gameObject.tag == "Player")
         {
             var cont = other.gameObject.GetComponent<CharacterController>();
             if (cont.velocity.y < -0.2 &&

@@ -12,7 +12,12 @@ public class TrpaslikMovement : MonoBehaviour
     private float zDepth;
     private void Start()
     {
-        zDepth = transform.position.z;
+        GlobalManager.Instance.PlayerSpawned += PlayerSpawned;
+    }
+
+    private void PlayerSpawned(CharacterControllerSwitcher character)
+    {
+        zDepth = character.transform.position.z;
     }
 
     // Update is called once per frame
