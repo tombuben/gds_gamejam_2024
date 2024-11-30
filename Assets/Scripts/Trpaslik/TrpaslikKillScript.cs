@@ -30,7 +30,7 @@ public class TrpaslikKillScript : MonoBehaviour
         GetComponent<TrpaslikMovement>().enabled = false;
         transform.Translate(Vector3.back * 10f);
         transform.DORotate(new Vector3(0,0,90f), 3f);
-        transform.DOMoveY(transform.position.y - 10f, 2f);
+        transform.DOMoveY(transform.position.y - 20f, 2f);
         transform.DOMoveX(transform.position.x + other.velocity.x, 2f);
         
         GlobalManager.Instance.killCount += 1;
