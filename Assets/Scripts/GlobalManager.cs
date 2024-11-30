@@ -23,8 +23,9 @@ public class GlobalManager : MonoBehaviour
 
     public Action<CharacterControllerSwitcher> PlayerSpawned;
     public Action PlayerKilled;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public DialogWindow DialogWindow;
+
     void Awake()
     {
         Instance = this;
