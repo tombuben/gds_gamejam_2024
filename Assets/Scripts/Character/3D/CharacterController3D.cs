@@ -4,7 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class CharacterController3D : MonoBehaviour
 {
+    private static readonly int LeftRight = Animator.StringToHash("LeftRight");
+    private static readonly int UpDown = Animator.StringToHash("UpDown");
     [SerializeField] private ScriptableStats _stats;
+    [SerializeField] private Animator _animator;
 
     private CharacterController characterController;
 
@@ -24,6 +27,9 @@ public class CharacterController3D : MonoBehaviour
     void Update()
     {
         _time += Time.deltaTime;
+        
+        _animator.SetFloat(LeftRight, Mathf.Clamp(_frameVelocity.x * 5f, -1f, 1f));
+        _animator.SetFloat(UpDown, Mathf.Clamp(_frameVelocity.z * 5f, -1f, 1f));
         GatherInput();
     }
 
