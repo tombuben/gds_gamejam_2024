@@ -21,7 +21,7 @@ public class PostprocessOn3D : MonoBehaviour
             dofComponent = tmp;
         }
         GlobalManager.Instance.TogglePerspectiveFinished += TogglePerspectiveFinished;
-        GlobalManager.Instance.TogglePerspective += TogglePerspective;
+        GlobalManager.Instance.OnTogglePerspective += TogglePerspective;
     }
 
     private void TogglePerspectiveFinished()
