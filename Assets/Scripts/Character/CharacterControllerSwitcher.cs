@@ -13,7 +13,7 @@ public class CharacterControllerSwitcher : MonoBehaviour
         
         controller3D.enabled = false;
         controller2D.enabled = true;
-        GlobalManager.Instance.togglePerspective += TogglePerspective;
+        GlobalManager.Instance.TogglePerspective += TogglePerspective;
     }
 
     private void TogglePerspective(bool is3D)

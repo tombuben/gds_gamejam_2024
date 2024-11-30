@@ -81,9 +81,6 @@ public class CharacterController3D : MonoBehaviour
         if (!_grounded && groundHit)
         {
             _grounded = true;
-            _coyoteUsable = true;
-            _bufferedJumpUsable = true;
-            _endedJumpEarly = false;
             GlobalManager.Instance.GroundedChanged?.Invoke(true, Mathf.Abs(_frameVelocity.y));
         }
         // Left the Ground
@@ -94,16 +91,6 @@ public class CharacterController3D : MonoBehaviour
             GlobalManager.Instance.GroundedChanged?.Invoke(false, 0);
         }
     }
-
-    #endregion
-
-
-    #region Jumping
-
-    private bool _jumpToConsume;
-    private bool _bufferedJumpUsable;
-    private bool _endedJumpEarly;
-    private bool _coyoteUsable;
 
     #endregion
 
@@ -147,7 +134,6 @@ public class CharacterController3D : MonoBehaviour
         else
         {
             var inAirGravity = _stats.FallAcceleration;
-            if (_endedJumpEarly && _frameVelocity.y > 0) inAirGravity *= _stats.JumpEndEarlyGravityModifier;
             _frameVelocity.y =
                 Mathf.MoveTowards(_frameVelocity.y, -_stats.MaxFallSpeed, inAirGravity * Time.fixedDeltaTime);
         }
