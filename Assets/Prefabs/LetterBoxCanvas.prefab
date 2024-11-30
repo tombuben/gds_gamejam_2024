@@ -270,7 +270,7 @@ MonoBehaviour:
   leftLetterbox: {fileID: 6082009623178480026}
   rightLetterbox: {fileID: 8015271305155999003}
   dialogWindow: {fileID: 0}
-  score: {fileID: 0}
+  score: {fileID: 3824141651761829636}
   duration: 0.5
   letterboxWidth: 160
 --- !u!1 &7861502707914746940
