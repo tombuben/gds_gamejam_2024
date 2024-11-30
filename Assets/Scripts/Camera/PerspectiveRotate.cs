@@ -12,9 +12,9 @@ public class PerspectiveRotate : MonoBehaviour
         GlobalManager.Instance.togglePerspective += HandleTogglePerspective;
     }
     
-    void HandleTogglePerspective()
+    void HandleTogglePerspective(bool is3D)
     {
-        if (GlobalManager.Instance.is3D)
+        if (is3D)
         {
             transform.DORotate(new Vector3(cameraRotation, 0f, 0f), transitionSpeed);
         }

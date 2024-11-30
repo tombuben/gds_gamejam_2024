@@ -31,9 +31,9 @@ public class PerspectiveSwitcher : MonoBehaviour
         GlobalManager.Instance.togglePerspective -= HandleTogglePerspective;
     }
 
-    void HandleTogglePerspective(){
+    void HandleTogglePerspective(bool is3D){
         orthoOn = !orthoOn;
-        if (orthoOn)
+        if (!is3D)
             blender.BlendToMatrix(ortho, 1f);
         else
             blender.BlendToMatrix(perspective, 1f);
