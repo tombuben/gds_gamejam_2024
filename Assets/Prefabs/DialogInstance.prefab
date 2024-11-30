@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5566459076638742293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2982980850872334769}
+  - component: {fileID: 5317872068409041899}
+  - component: {fileID: 789723087476644904}
+  m_Layer: 0
+  m_Name: DialogInstance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2982980850872334769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566459076638742293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5317872068409041899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566459076638742293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd96cc364e06c64684cd2428af32af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogStartIndex: 0
+  DoUpdate: 1
+  DialogNodes:
+  - character: 0
+    text: element 0
+    option1Text: element 0
+    Option1NextNodeIndex: 0
+    option2Text: element 1
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: element 1
+    option1Text: element 0
+    Option1NextNodeIndex: 0
+    option2Text: element 2
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: element 2
+    option1Text: end
+    Option1NextNodeIndex: -1
+    option2Text: element 0
+    Option2NextNodeIndex: 0
+    option3Text: element 3
+    Option3NextNodeIndex: 3
+  - character: 1
+    text: element 3
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
+--- !u!135 &789723087476644904
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566459076638742293}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
