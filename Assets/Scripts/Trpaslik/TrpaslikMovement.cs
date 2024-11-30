@@ -10,9 +10,11 @@ public class TrpaslikMovement : MonoBehaviour
     public bool movingForward;
 
     private float zDepth;
+    private Animator animator;
     private void Start()
     {
         GlobalManager.Instance.PlayerSpawned += PlayerSpawned;
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void PlayerSpawned(CharacterControllerSwitcher character)
@@ -45,5 +47,6 @@ public class TrpaslikMovement : MonoBehaviour
                 movingForward = true;
             }
         }
+        animator.SetFloat("LeftRight", movingForward ? 1 : -1);
     }
 }
