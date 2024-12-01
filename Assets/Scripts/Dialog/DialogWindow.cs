@@ -43,7 +43,7 @@ public class DialogWindow : MonoBehaviour
 
         // main text
         var characterColor = GetCharacterColor(character);
-        MainText.text = $"<color=#{characterColor.ToHexString()}>{character}</color> {text}";
+        MainText.text = $"<color=#{characterColor.ToHexString()}>{GetCharacterName(character)}</color> {text}";
 
         // show sprite
         ShowSprite(character, characterSprite);
@@ -85,7 +85,7 @@ public class DialogWindow : MonoBehaviour
             case CharacterEnum.Hero:
                 return Color.blue;
             case CharacterEnum.Princess:
-                return Color.yellow;
+                return Color.magenta;
             default:
                 return Color.green;
         }
@@ -105,6 +105,19 @@ public class DialogWindow : MonoBehaviour
 
             RightCharacterImage.sprite = sprite;
         }
+    }
+
+    private string GetCharacterName(CharacterEnum character)
+    {
+        if (character == CharacterEnum.Princess)
+        {
+            return "Snow White";
+        }
+        else
+        {
+            return character.ToString();
+        }
+
     }
 }
 
