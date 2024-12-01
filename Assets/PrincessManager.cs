@@ -27,7 +27,7 @@ public class PrincessManager : MonoBehaviour
         
         GlobalManager.Instance.TrpaslikKilled -= TrpaslikKilled;
         GlobalManager.Instance.TrpaslikApologized += TrpaslikApologized;
-        
+
         HurtDwarvesDailog.DialogFinishedSuccessfully += GoTo3D;
         HurtDwarvesDailog.DialogFinishedUnsuccessfully += GoTo3D;
     }
