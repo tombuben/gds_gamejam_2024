@@ -19,6 +19,9 @@ public class DialogInstance : MonoBehaviour
     public Action DialogFinishedSuccessfully;
     public Action DialogFinishedUnsuccessfully;
 
+    public float DialogTimeout = 0.3f;
+    private float DialogClosedTime = 0;
+
     protected void Start()
     {
         DoUpdate = false;
@@ -53,7 +56,8 @@ public class DialogInstance : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        if (Time.time > DialogClosedTime + DialogTimeout && 
+            (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space)))
         {
             DialogOpened?.Invoke();
             ShowCurrentNode();
@@ -85,6 +89,7 @@ public class DialogInstance : MonoBehaviour
         else if (CurrentDialogIndex == -2) // unsuccessfull end of the dialog
         {
             DialogFinishedUnsuccessfully?.Invoke();
+            DialogClosedTime = Time.time;
         }
         else if (CurrentDialogIndex == -10)
         {
