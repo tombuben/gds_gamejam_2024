@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ParticleKiller : MonoBehaviour
 {
+    [SerializeField] private float deathTimeMultiplier = 1f;
     [SerializeField] private ParticleSystem particleSystem;
 
     private float deathTime;
@@ -10,6 +11,7 @@ public class ParticleKiller : MonoBehaviour
     {
         // Get the total duration of the particle system
         deathTime = particleSystem.main.duration + particleSystem.main.startLifetime.constant;
+        deathTime *= deathTimeMultiplier;
     }
 
     private void Update()
