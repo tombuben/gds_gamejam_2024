@@ -56,10 +56,16 @@ public class GlobalManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void GoTo3D(bool target)
+    {
+        is3D = target;
+        OnTogglePerspective?.Invoke(is3D);
+    }
+    
     public void TogglePerspective()
     {
         is3D = !is3D;
-        OnTogglePerspective?.Invoke(is3D);
+        GoTo3D(is3D);
     }
 
     // Update is called once per frame
