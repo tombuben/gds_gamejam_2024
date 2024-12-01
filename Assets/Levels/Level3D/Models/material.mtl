@@ -79,3 +79,21 @@ illum 0
 Ns 0.000000
 map_Kd texture_9.png
 map_d texture_9.png
+newmtl 11
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Tr 0.000000
+illum 0
+Ns 0.000000
+map_Kd texture_11.png
+map_d texture_11.png
+newmtl 13
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Tr 0.000000
+illum 0
+Ns 0.000000
+map_Kd texture_13.png
+map_d texture_13.png
