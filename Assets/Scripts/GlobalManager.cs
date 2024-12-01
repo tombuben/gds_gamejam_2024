@@ -55,7 +55,7 @@ public class GlobalManager : MonoBehaviour
 
     private IEnumerator OnPlayerKilledCoroutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
