@@ -7,21 +7,3 @@ illum 0
 Ns 0.000000
 map_Kd texture_1.png
 map_d texture_1.png
-newmtl 5
-Ka 1.000000 1.000000 1.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-Tr 0.000000
-illum 0
-Ns 0.000000
-map_Kd texture_5.png
-map_d texture_5.png
-newmtl 6
-Ka 1.000000 1.000000 1.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-Tr 0.000000
-illum 0
-Ns 0.000000
-map_Kd texture_6.png
-map_d texture_6.png
