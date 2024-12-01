@@ -46,6 +46,19 @@ public class GlobalManager : MonoBehaviour
         is3D = false;
         
         PlayerKilled += OnPlayerKilled;
+        TrpaslikApologized += OnTrpaslikApologized;
+    }
+
+    private void OnTrpaslikApologized()
+    {
+        if (apologizeCount == killCount)
+        {
+            DialogWindow.ShowText(
+                CharacterEnum.Hero, null,
+                "Oh, I can go back to the princess now!",
+                null
+            );
+        }
     }
 
     private void OnPlayerKilled()
