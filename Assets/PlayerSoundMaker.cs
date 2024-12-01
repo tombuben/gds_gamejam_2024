@@ -18,17 +18,17 @@ public class PlayerSoundMaker : MonoBehaviour
 
     private void TrpaslikKilled()
     {
-        AudioSource.PlayClipAtPoint(scoreSound, transform.position, volume: 3f);
+        AudioSource.PlayClipAtPoint(scoreSound, Camera.main.transform.position, volume: 3f);
     }
 
     private void PlayerKilled()
     {
-        AudioSource.PlayClipAtPoint(killedSound, transform.position, volume: 0.7f);
+        AudioSource.PlayClipAtPoint(killedSound, Camera.main.transform.position, volume: 0.7f);
     }
 
     private void Jumped()
     {
         var i = Random.Range(0, audioClips.Length);
-        AudioSource.PlayClipAtPoint(audioClips[i], transform.position, volume: 0.7f);
+        AudioSource.PlayClipAtPoint(audioClips[i], Camera.main.transform.position, volume: 0.7f);
     }
 }

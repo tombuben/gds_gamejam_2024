@@ -113,22 +113,30 @@ MonoBehaviour:
     option3Text: 
     Option3NextNodeIndex: 0
   - character: 0
-    text: The bandits were actually good guys? This completely changes my perspective
-      on things!
+    text: The bandits were actually good guys?
     option1Text: 
     Option1NextNodeIndex: 0
     option2Text: 
     Option2NextNodeIndex: 5
     option3Text: 
     Option3NextNodeIndex: 0
-  - character: 1
+  - character: 0
     text: THIS CHANGES EVERYTHING!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: My perspective is completely flipped.
     option1Text: 
     Option1NextNodeIndex: 0
     option2Text: 
     Option2NextNodeIndex: -1
     option3Text: 
     Option3NextNodeIndex: 0
+  DialogTimeout: 0.3
 --- !u!135 &80968440914707004
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -223,6 +231,7 @@ MonoBehaviour:
     Option2NextNodeIndex: -1
     option3Text: 
     Option3NextNodeIndex: 0
+  DialogTimeout: 0.3
 --- !u!135 &6598929290033145374
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -317,6 +326,7 @@ MonoBehaviour:
     Option2NextNodeIndex: -1
     option3Text: 
     Option3NextNodeIndex: 0
+  DialogTimeout: 0.3
 --- !u!135 &8333520617646656980
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1200,6 +1200,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5521300153975863128, guid: 1a4faca0fa7bb34439afa74631f69c1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521300153975863128, guid: 1a4faca0fa7bb34439afa74631f69c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842480387680883131, guid: 1a4faca0fa7bb34439afa74631f69c1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842480387680883131, guid: 1a4faca0fa7bb34439afa74631f69c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.95
+      objectReference: {fileID: 0}
     - target: {fileID: 5888272336982332164, guid: 1a4faca0fa7bb34439afa74631f69c1e, type: 3}
       propertyPath: m_Name
       value: 3DLevelContainer
