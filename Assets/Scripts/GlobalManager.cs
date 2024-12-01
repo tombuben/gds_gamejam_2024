@@ -70,18 +70,4 @@ public class GlobalManager : MonoBehaviour
         is3D = !is3D;
         GoTo3D(is3D);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            TogglePerspective();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
 }
