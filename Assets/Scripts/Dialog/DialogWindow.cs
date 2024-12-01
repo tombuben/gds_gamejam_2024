@@ -38,16 +38,6 @@ public class DialogWindow : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
-        {
-            Button selectedButton = EventSystem.current.currentSelectedGameObject?.GetComponent<Button>();
-
-            if (selectedButton != null)
-            {
-                selectedButton.onClick?.Invoke();
-            }
-        }
-
         if (EventSystem.current.currentSelectedGameObject == null)
         {
             Option2.Select();
@@ -91,7 +81,8 @@ public class DialogWindow : MonoBehaviour
     {
         GlobalManager.Instance.OnDialogClosed?.Invoke();
         gameObject.SetActive(false);
-
+        
+        Debug.Log ($"Option Selected Callback: {dialogOption}");
         Callback?.Invoke(dialogOption);
 
     }
