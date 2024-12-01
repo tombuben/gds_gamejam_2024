@@ -121,14 +121,64 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: bdfbsd
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 4
+    text: 'Ugh, thanks for running with me. Snow White will be pleased with how fit
+      I am.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 4
+    text: "I don\u2019t like running alone, so I run away from people who want to
+      talk to me.    "
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 4
+    text: What do yo want anyway?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: "I\u2019m here to apologize for pushing you off that cliff. I thought...    "
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 4
+    text: Ah, that thing.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 4
+    text: "Don\u2019t mention it, all good."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 4
+    text: And thank you for the run.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -10
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &4208107503735478076
 SphereCollider:
   m_ObjectHideFlags: 0
