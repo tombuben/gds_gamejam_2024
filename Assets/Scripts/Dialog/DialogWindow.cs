@@ -89,11 +89,11 @@ public class DialogWindow : MonoBehaviour
 
     private void OptionSelectedCallback(DialogOptions dialogOption)
     {
+        GlobalManager.Instance.OnDialogClosed?.Invoke();
         gameObject.SetActive(false);
 
         Callback?.Invoke(dialogOption);
 
-        GlobalManager.Instance.OnDialogClosed?.Invoke();
     }
 
     private Color GetCharacterColor(CharacterEnum character)
