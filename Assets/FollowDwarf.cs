@@ -9,6 +9,8 @@ public class FollowDwarf : MonoBehaviour
     bool following = false;
     private Animator animator;
     
+    public GameObject destroyOnFinish;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +25,10 @@ public class FollowDwarf : MonoBehaviour
     private void StopSmudlaFollowing()
     {
         following = false;
+        
+        GlobalManager.Instance.apologizeCount += 1;
+        GlobalManager.Instance.TrpaslikApologized?.Invoke();
+        destroyOnFinish.SetActive(false);
     }
 
     private void StartFollowing()
@@ -31,8 +37,6 @@ public class FollowDwarf : MonoBehaviour
         dialog.enabled = false;
         GlobalManager.Instance.SmudlaIsFollowing = true;
         GlobalManager.Instance.SmudlaStartedFollowing?.Invoke();
-        
-        // TODO add score
     }
 
     // Update is called once per frame

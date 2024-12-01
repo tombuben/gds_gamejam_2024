@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpline: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 2
   splinePosition: 0
   movingForward: 0
 --- !u!114 &3868231502764070067

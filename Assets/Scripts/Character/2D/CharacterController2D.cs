@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -19,6 +20,18 @@ public class CharacterController2D : MonoBehaviour
     private float _time;
 
     private float depthZ;
+    
+    //VFX
+    private GameObject runVfxInstance;
+    
+    [SerializeField] private Boolean canSpawnRunVFX = true;
+    
+    [SerializeField] private GameObject jumpVfx;
+    [SerializeField] private GameObject runVfx;
+    
+    [SerializeField] private Transform jumpVfxTransform;
+    [SerializeField] private Transform runVfxTransform;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -148,7 +161,9 @@ public class CharacterController2D : MonoBehaviour
     }
 
     private void ExecuteJump()
-    {
+    {     
+        Instantiate(jumpVfx, jumpVfxTransform);
+        
         _endedJumpEarly = false;
         _timeJumpWasPressed = 0;
         _bufferedJumpUsable = false;
@@ -172,6 +187,35 @@ public class CharacterController2D : MonoBehaviour
         {
             _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, _frameInput.Move.x * _stats.MaxSpeed,
                 _stats.Acceleration * Time.fixedDeltaTime);
+
+            
+            //vfx
+            if ((_frameInput.Move.x > 0 || _frameInput.Move.x < 0) && _grounded && canSpawnRunVFX)
+            {
+                runVfxInstance = Instantiate(runVfx, runVfxTransform);
+                
+                if (_frameInput.Move.x > 0 && canSpawnRunVFX)
+                {
+                    runVfxInstance.GetComponent<ParticleSystemRenderer>().flip = new Vector3(0, 0, 0);
+                    runVfxInstance.GetComponent<ParticleSystemRenderer>().pivot = new Vector3(0, 0, 0);
+                }
+                
+                if (_frameInput.Move.x < 0 && canSpawnRunVFX)
+                {
+                    runVfxInstance.GetComponent<ParticleSystemRenderer>().flip = new Vector3(1, 0, 0);
+                    runVfxInstance.GetComponent<ParticleSystemRenderer>().pivot = new Vector3(1, 0, 0);
+                }
+                
+            }
+            
+            if (runVfxInstance != null)
+            {
+                canSpawnRunVFX = false;
+            }
+            else
+            {
+                canSpawnRunVFX = true;
+            }
         }
     }
 
