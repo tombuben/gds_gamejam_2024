@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -24,12 +23,27 @@ public class TrpaslikPathRunner : MonoBehaviour
         var pos = (Vector3)CurrentSpline.EvaluatePosition(splinePosition) + splines.transform.position;
         transform.position = pos;
     }
-    
+
+    int mockDialogCounter = 0;
+
     private void OnTriggerEnter(Collider other)
     {
         if (NextSplineIndex < splines.Splines.Count)
         {
-            isRunning = true;
+            DialogWindow dialogWindow = GlobalManager.Instance.DialogWindow;
+            string text;
+            if (mockDialogCounter == 0) { text = "HAHAA, catch me if you can."; }
+            else if (mockDialogCounter == 1) { text = "Catch me if want to talk to me."; }
+            else { text = "What a nice run, muhehe."; }
+            mockDialogCounter++;
+            mockDialogCounter = mockDialogCounter % 3;
+
+            dialogWindow.ShowText(
+                CharacterEnum.Bambule,
+                GetComponentInChildren<SpriteRenderer>().sprite,
+                text,
+                (o) => { isRunning = true; }
+                );
         }
     }
 
