@@ -4,6 +4,9 @@ using UnityEngine;
 [DefaultExecutionOrder(-1)]
 public class CharacterControllerSwitcher : MonoBehaviour
 {
+    private static readonly int LeftRight = Animator.StringToHash("LeftRight");
+    private Animator animator;
+
     private CharacterController2D controller2D;
     private CharacterController3D controller3D;
     private Rigidbody rb;
@@ -15,6 +18,7 @@ public class CharacterControllerSwitcher : MonoBehaviour
         controller3D = GetComponent<CharacterController3D>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionZ;
+        animator = GetComponentInChildren<Animator>();
         
         controller3D.enabled = false;
         controller2D.enabled = true;
@@ -30,6 +34,7 @@ public class CharacterControllerSwitcher : MonoBehaviour
     {
         controller3D.enabled = false;
         controller2D.enabled = false;
+        animator.SetFloat(LeftRight, 0);
     }
     
     private void DialogHidden()
