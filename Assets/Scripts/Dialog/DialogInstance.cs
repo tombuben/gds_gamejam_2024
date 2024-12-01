@@ -53,7 +53,7 @@ public class DialogInstance : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
         {
             DialogOpened?.Invoke();
             ShowCurrentNode();

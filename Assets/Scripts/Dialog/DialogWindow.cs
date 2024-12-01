@@ -5,6 +5,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Splines;
+using UnityEngine.EventSystems;
 
 public class DialogWindow : MonoBehaviour
 {
@@ -33,6 +34,19 @@ public class DialogWindow : MonoBehaviour
         Option1.onClick.AddListener(() => OptionSelectedCallback(DialogOptions.Option1));
         Option2.onClick.AddListener(() => OptionSelectedCallback(DialogOptions.Option2));
         Option3.onClick.AddListener(() => OptionSelectedCallback(DialogOptions.Option3));
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        {
+            Button selectedButton = EventSystem.current.currentSelectedGameObject?.GetComponent<Button>();
+
+            if (selectedButton != null)
+            {
+                selectedButton.onClick?.Invoke();
+            }
+        }
     }
 
     public void ShowText(CharacterEnum character, Sprite characterSprite, string text, Action<DialogOptions> callBack,
