@@ -48,14 +48,79 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: bdfbsd
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 0
+    text: STOP!!!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 7
+    text: Ou howdy neighbor.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 7
+    text: "You scared me. Don\u2019t do this to me."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 7
+    text: Can't you see I'm running here? Somebody threw me off a cliff, and now
+      I need to stretch my legs.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Yeah, that was me... sorry.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 7
+    text: Oh, I do recognize your silly face. Haven't seen anyone so ugly in years.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 7
+    text: Hehehe, such a silly face, hehehe.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 7
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: ...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: I guess that counts.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -10
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &7802456705464931884
 SphereCollider:
   m_ObjectHideFlags: 0

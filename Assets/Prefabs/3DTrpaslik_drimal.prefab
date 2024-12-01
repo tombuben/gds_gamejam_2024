@@ -49,7 +49,7 @@ MonoBehaviour:
   DoUpdate: 0
   DialogNodes:
   - character: 2
-    text: bdfbsd
+    text: zarazene prdy
     option1Text: jkh
     Option1NextNodeIndex: -2
     option2Text: jhg
@@ -124,6 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58b712fe95c64ed3a3d1c7e0912ea30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zarazenyDialog: {fileID: 5294921407815416715}
+  vytazenyDialog: {fileID: 6212411319870669215}
+  ZatazenyGameObject: {fileID: 8571162352907404620}
+  VytazenyGameObject: {fileID: 7249939318557012893}
 --- !u!1 &3822945201183186926
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3800401823712915422
 Transform:
   m_ObjectHideFlags: 0
@@ -206,7 +210,7 @@ MonoBehaviour:
   DoUpdate: 0
   DialogNodes:
   - character: 2
-    text: bdfbsd
+    text: vytazene prdy
     option1Text: jkh
     Option1NextNodeIndex: -2
     option2Text: jhg
@@ -295,6 +299,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2aab31a09350d44cbc2be8880571a68, type: 3}
+--- !u!1 &7249939318557012893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2536964227766829521, guid: d2aab31a09350d44cbc2be8880571a68, type: 3}
+  m_PrefabInstance: {fileID: 5163921110480204364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8793303142351061809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441103925809607037, guid: d2aab31a09350d44cbc2be8880571a68, type: 3}
@@ -360,5 +369,10 @@ PrefabInstance:
 --- !u!4 &7522701623344002528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441103925809607037, guid: d2aab31a09350d44cbc2be8880571a68, type: 3}
+  m_PrefabInstance: {fileID: 6181183038657201309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8571162352907404620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2536964227766829521, guid: d2aab31a09350d44cbc2be8880571a68, type: 3}
   m_PrefabInstance: {fileID: 6181183038657201309}
   m_PrefabAsset: {fileID: 0}

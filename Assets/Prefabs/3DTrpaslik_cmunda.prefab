@@ -214,7 +214,7 @@ MonoBehaviour:
     option1Text: 
     Option1NextNodeIndex: 0
     option2Text: 
-    Option2NextNodeIndex: -1
+    Option2NextNodeIndex: -10
     option3Text: 
     Option3NextNodeIndex: 0
   - character: 5

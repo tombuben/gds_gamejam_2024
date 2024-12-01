@@ -34,6 +34,7 @@ public class GlobalManager : MonoBehaviour
     public bool PickedUpHat = false;
 
     public bool SmudlaIsFollowing;
+    public Action SmudlaStartedFollowing;
     public Action StopSmudlaFollowing;
 
     void Awake()

@@ -15,7 +15,7 @@ public class DialogInstance : MonoBehaviour
     private DialogWindow DialogWindow;
 
     public Action DialogOpened;
-    
+
     public Action DialogFinishedSuccessfully;
     public Action DialogFinishedUnsuccessfully;
 
@@ -26,7 +26,7 @@ public class DialogInstance : MonoBehaviour
         DialogWindow = GlobalManager.Instance.DialogWindow;
 
         DialogFinishedUnsuccessfully += () => { CurrentDialogIndex = DialogStartIndex; };
-        DialogFinishedSuccessfully += () => { CurrentDialogIndex = DialogStartIndex; };
+        DialogFinishedSuccessfully += () => { this.enabled = false; };
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,9 +81,15 @@ public class DialogInstance : MonoBehaviour
         {
             DialogFinishedSuccessfully?.Invoke();
         }
-        else if (CurrentDialogIndex <= -2) // unsuccessfull end of the dialog
+        else if (CurrentDialogIndex == -2) // unsuccessfull end of the dialog
         {
             DialogFinishedUnsuccessfully?.Invoke();
+        }
+        else if (CurrentDialogIndex == -10)
+        {
+            DialogFinishedSuccessfully?.Invoke();
+            GlobalManager.Instance.apologizeCount++;
+            GlobalManager.Instance.TrpaslikApologized?.Invoke();
         }
         else
         {

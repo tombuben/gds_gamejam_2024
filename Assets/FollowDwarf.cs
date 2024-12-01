@@ -13,7 +13,7 @@ public class FollowDwarf : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         
         dialog.DialogFinishedUnsuccessfully += StartFollowing;
         dialog.DialogFinishedSuccessfully += StartFollowing;
@@ -28,7 +28,11 @@ public class FollowDwarf : MonoBehaviour
     private void StartFollowing()
     {
         following = true;
+        dialog.enabled = false;
         GlobalManager.Instance.SmudlaIsFollowing = true;
+        GlobalManager.Instance.SmudlaStartedFollowing?.Invoke();
+        
+        // TODO add score
     }
 
     // Update is called once per frame
