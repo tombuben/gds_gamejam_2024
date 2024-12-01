@@ -18,6 +18,12 @@ public class Score : MonoBehaviour
         globalManager.TrpaslikKilled += () => { KilledGnomesCount++; UpdateScoreUI(); };
         globalManager.TrpaslikApologized += () => { SavedGnomesCount++; UpdateScoreUI(); };
         globalManager.OnTogglePerspective += (is3D) => { UpdateScoreUI(); };
+        globalManager.GameWon += GameWon;
+    }
+
+    private void GameWon()
+    {
+        Destroy(gameObject);
     }
 
     private void UpdateScoreUI()
