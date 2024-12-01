@@ -43,6 +43,7 @@ public class MusicLoopper : MonoBehaviour
             musicAudioSource.Stop();
             musicAudioSource.loop = false;
             musicAudioSource.resource = music3D;
+            musicAudioSource.volume = 0.321f;
             musicAudioSource.Play();
 
             start3DMusic = false;
