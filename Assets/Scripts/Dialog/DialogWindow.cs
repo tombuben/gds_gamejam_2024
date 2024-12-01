@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System;
 using Unity.VisualScripting;
 using UnityEngine.TextCore.Text;
+using UnityEngine.Splines;
+using UnityEngine.EventSystems;
 
 public class DialogWindow : MonoBehaviour
 {
@@ -16,7 +18,16 @@ public class DialogWindow : MonoBehaviour
     [SerializeField] Button Option3;
     [SerializeField] TextMeshProUGUI Option3Text;
 
+    [SerializeField] Image LeftCharacterImage;
+    [SerializeField] Image RightCharacterImage;
+
     Action<DialogOptions> Callback;
+
+    private void Awake()
+    {
+        LeftCharacterImage.gameObject.SetActive(false);
+        RightCharacterImage.gameObject.SetActive(false);
+    }
 
     private void Start()
     {
@@ -25,7 +36,25 @@ public class DialogWindow : MonoBehaviour
         Option3.onClick.AddListener(() => OptionSelectedCallback(DialogOptions.Option3));
     }
 
-    public void ShowText(Characters character, string text, Action<DialogOptions> callBack,
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        {
+            Button selectedButton = EventSystem.current.currentSelectedGameObject?.GetComponent<Button>();
+
+            if (selectedButton != null)
+            {
+                selectedButton.onClick?.Invoke();
+            }
+        }
+
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            Option2.Select();
+        }
+    }
+
+    public void ShowText(CharacterEnum character, Sprite characterSprite, string text, Action<DialogOptions> callBack,
         string option1text = null, string option2text = null, string option3text = null)
     {
         gameObject.SetActive(true);
@@ -33,10 +62,10 @@ public class DialogWindow : MonoBehaviour
 
         // main text
         var characterColor = GetCharacterColor(character);
-        MainText.text = $"<color=#{characterColor.ToHexString()}>{character}</color> {text}";
+        MainText.text = $"<color=#{characterColor.ToHexString()}>{GetCharacterName(character)}</color> {text}";
 
-        // TODO: show the sprite of the character speaking
-        // ...  
+        // show sprite
+        ShowSprite(character, characterSprite);
 
         // options
         Option1Text.text = option1text;
@@ -60,25 +89,54 @@ public class DialogWindow : MonoBehaviour
 
     private void OptionSelectedCallback(DialogOptions dialogOption)
     {
+        GlobalManager.Instance.OnDialogClosed?.Invoke();
         gameObject.SetActive(false);
 
         Callback?.Invoke(dialogOption);
 
-        GlobalManager.Instance.OnDialogClosed?.Invoke();
     }
 
-    private Color GetCharacterColor(Characters character)
+    private Color GetCharacterColor(CharacterEnum character)
     {
         // note: colors and names of characters are not yet final, this is just to test the code for now 
         switch (character)
         {
-            case Characters.Hero:
+            case CharacterEnum.Hero:
                 return Color.blue;
-            case Characters.Princess:
-                return Color.yellow;
+            case CharacterEnum.Princess:
+                return Color.magenta;
             default:
                 return Color.green;
         }
+    }
+
+    private void ShowSprite(CharacterEnum character, Sprite sprite)
+    {
+        if (character == CharacterEnum.Hero)
+        {
+            LeftCharacterImage.gameObject.SetActive(true);
+            RightCharacterImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            LeftCharacterImage.gameObject.SetActive(false);
+            RightCharacterImage.gameObject.SetActive(sprite != null);
+
+            RightCharacterImage.sprite = sprite;
+        }
+    }
+
+    private string GetCharacterName(CharacterEnum character)
+    {
+        if (character == CharacterEnum.Princess)
+        {
+            return "Snow White";
+        }
+        else
+        {
+            return character.ToString();
+        }
+
     }
 }
 
@@ -87,7 +145,7 @@ public enum DialogOptions
     Option1, Option2, Option3
 }
 
-public enum Characters
+public enum CharacterEnum
 {
     Hero, Princess, Profa, Smudla, Bambule, Cmunda, Drimal, Kejchal, Stydlin
 }
