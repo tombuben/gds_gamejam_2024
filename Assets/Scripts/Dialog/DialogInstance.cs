@@ -107,8 +107,19 @@ public class DialogInstance : MonoBehaviour
 
         DialogNode node = DialogNodes[CurrentDialogIndex];
 
+        Sprite characterSprite;
+        try
+        {
+            characterSprite = transform.parent.GetComponentInChildren<SpriteRenderer>().sprite;
+        }
+        catch (Exception)
+        {
+            characterSprite = null;
+        }
+
         DialogWindow.ShowText(
             character: node.character,
+            characterSprite: characterSprite,
             text: node.text,
             callBack: Callback,
             option1text: node.option1Text,
@@ -121,7 +132,7 @@ public class DialogInstance : MonoBehaviour
 [Serializable]
 public class DialogNode
 {
-    public Characters character;
+    public CharacterEnum character;
     public string text;
     public string option1Text;
     public int Option1NextNodeIndex;
