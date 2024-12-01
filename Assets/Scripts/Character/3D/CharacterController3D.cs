@@ -55,8 +55,6 @@ public class CharacterController3D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _frameVelocity = characterController.velocity * Time.fixedDeltaTime;
-
         CheckCollisions();
 
         HandleDirection();

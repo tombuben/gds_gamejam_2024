@@ -186,11 +186,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ab77bb3e99048498140b69f1f2df0f, type: 3}
---- !u!1 &186404404 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8290708335085475371, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
-  m_PrefabInstance: {fileID: 1262171314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &203466966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,29 +1541,6 @@ CharacterController:
   m_CorrespondingSourceObject: {fileID: 1499782393607574043, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
   m_PrefabInstance: {fileID: 1262171314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1105329080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186404404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32410abb077a34e0b96684e5765e6b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogStartIndex: 0
-  DoUpdate: 0
-  DialogNodes:
-  - character: 0
-    text: Snow White was kidnapped! I have to defeat ALL the bandits and save her!
-    option1Text: Save the princess
-    Option1NextNodeIndex: -1
-    option2Text: Be a hero
-    Option2NextNodeIndex: -1
-    option3Text: Defeat the bandits
-    Option3NextNodeIndex: -1
 --- !u!4 &1108173279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15ab77bb3e99048498140b69f1f2df0f, type: 3}
@@ -1715,10 +1687,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 656522756639133246, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.71
-      objectReference: {fileID: 0}
     - target: {fileID: 5293062851328719345, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.93
@@ -1759,10 +1727,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5425213792135122047, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
-      propertyPath: m_ImplicitTensor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8290708335085475371, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
       propertyPath: m_Name
       value: Character
@@ -1770,10 +1734,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8290708335085475371, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1105329080}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0f39ad791fe4c6280bb9b785805e18, type: 3}
 --- !u!1001 &1270160897
 PrefabInstance:
