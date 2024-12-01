@@ -551,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 976914455804388445, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 140.9414
+      value: 232.8975
       objectReference: {fileID: 0}
     - target: {fileID: 976914455804388445, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 976914455804388445, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80.4707
+      value: 126.44876
       objectReference: {fileID: 0}
     - target: {fileID: 976914455804388445, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -604,10 +604,6 @@ PrefabInstance:
     - target: {fileID: 6091241416404815557, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
       propertyPath: m_Name
       value: DialogWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091241416404815557, guid: ba385a7e14821524a9910d368b59fe5c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
