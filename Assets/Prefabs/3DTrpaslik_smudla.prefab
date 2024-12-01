@@ -155,14 +155,111 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: bdfbsd
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 3
+    text: 
+    option1Text: 'Hi, what a terrible fate. What terrible luck.    '
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: 'Somebody must have cursed me the day I was born.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: What happened to you?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: I was just about to do my good deed of the day.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: 'Snow White tells us that we should do at least one good deed per day.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: 'And then someone jumps on top of my head, throwing me off a cliff and
+      stopping my good deed.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Yeah, that was me, sorry.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 7
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: But I think I can help you.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: You can?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 9
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: At least I think I can.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 10
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: 'Just follow me, and we will find someone in need.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 11
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: Lets do that.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 12
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: 'Snow White will be so proud of me.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &6614130351036157389
 SphereCollider:
   m_ObjectHideFlags: 0

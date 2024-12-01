@@ -1,5 +1,7 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LetterBoxManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class LetterBoxManager : MonoBehaviour
     void Start()
     {
         GlobalManager.Instance.OnTogglePerspective += TogglePerspective;
+        GlobalManager.Instance.GameWon += EndScreen;
     }
 
     private void TogglePerspective(bool is3D)
@@ -62,5 +65,29 @@ public class LetterBoxManager : MonoBehaviour
                 score.position = new Vector2(amount, score.position.y);
             }, 250, duration);
         }
+    }
+
+    private void EndScreen()
+    {
+        StartCoroutine(EndCurtains());
+    }
+
+    public IEnumerator EndCurtains()
+    {
+        yield return new WaitForSeconds(3f);
+        
+        DOTween.To(() => leftLetterbox.sizeDelta.x, amount =>
+        {
+            leftLetterbox.sizeDelta = new Vector2(amount, leftLetterbox.sizeDelta.y);
+        }, 640, 2f);
+
+        DOTween.To(() => rightLetterbox.sizeDelta.x, amount =>
+        {
+            rightLetterbox.sizeDelta = new Vector2(amount, leftLetterbox.sizeDelta.y);
+        }, 640, 2f);
+        
+        
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene("Credits");
     }
 }

@@ -81,14 +81,151 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
+  - character: 0
+    text: 'Hi, I would like to apologize for throwing you off the cliff.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
   - character: 2
-    text: bdfbsd
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+    text: 'All good, all good, my good sir.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: 'But when you''re here, listen to my great joke.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Do I have to?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: Yes you do.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: 'Now tell me, what does a panda do when it runs out of space?    '
+    option1Text: How
+    Option1NextNodeIndex: 6
+    option2Text: Eats another bamboo
+    Option2NextNodeIndex: 7
+    option3Text: "I don\u2019t know."
+    Option3NextNodeIndex: 14
+  - character: 0
+    text: 'How could a panda run out of space? It''s in the forest.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: "It will probably just keep on eating. That\u2019s what pandas usually
+      do."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: "No, no, no, you don\u2019t understand. It is a joke."
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 9
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: Now tell me, what does panda do, when it runs out of space.
+    option1Text: Goes to a friend
+    Option1NextNodeIndex: 10
+    option2Text: Uses galvanized squared steal
+    Option2NextNodeIndex: 12
+    option3Text: "I don\u2019t know"
+    Option3NextNodeIndex: 14
+  - character: 0
+    text: Goes to visit a friend who has a larger place to stay.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 11
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: Are you making fun of me? It is a JOKE!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: 'Uses galvanized square steel to renovate its house.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 13
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: 'Hmm, that might actually work, but remember, it''s a joke.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: It expands.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 15
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: HAHAHA HAHAHAHAHA
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 16
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 2
+    text: "It is a good one, isn\u2019t it?"
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 17
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: ...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -10
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &8059641279421693868
 SphereCollider:
   m_ObjectHideFlags: 0
