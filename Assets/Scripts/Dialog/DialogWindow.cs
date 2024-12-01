@@ -50,12 +50,9 @@ public class DialogWindow : MonoBehaviour
         {
             Option2Text.text = "Continue";
             Option2.gameObject.SetActive(true);
-            Option2.Select();
         }
-        else
-        {
-            Option1.Select();
-        }
+        
+        Option2.Select();
 
         // callback
         Callback = callBack;

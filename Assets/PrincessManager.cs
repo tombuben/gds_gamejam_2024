@@ -14,6 +14,9 @@ public class PrincessManager : MonoBehaviour
         ApologizedToAllDialog.gameObject.SetActive(false);
         
         GlobalManager.Instance.TrpaslikKilled += TrpaslikKilled;
+        
+        NoHurtDialog.DialogFinishedSuccessfully += ShowEndScreen;
+        NoHurtDialog.DialogFinishedUnsuccessfully += ShowEndScreen;
     }
 
     private void TrpaslikKilled()
@@ -43,7 +46,17 @@ public class PrincessManager : MonoBehaviour
             NoHurtDialog.gameObject.SetActive(false);
             HurtDwarvesDailog.gameObject.SetActive(false);
             ApologizedToAllDialog.gameObject.SetActive(true);
+            
+            
+            ApologizedToAllDialog.DialogFinishedSuccessfully += ShowEndScreen;
+            ApologizedToAllDialog.DialogFinishedUnsuccessfully += ShowEndScreen;
         }
+    }
+
+    private void ShowEndScreen()
+    {
+        GlobalManager.Instance.GameWon?.Invoke();
+        GlobalManager.Instance.GoTo3D(false);
     }
 
     // Update is called once per frame

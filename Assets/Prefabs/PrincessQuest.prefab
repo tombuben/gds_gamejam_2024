@@ -80,14 +80,55 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
+  - character: 0
+    text: I'm here my princess! I'm here to save you!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
   - character: 1
-    text: Tys ublizil trpaslikum! omluv se
-    option1Text: fd
-    Option1NextNodeIndex: -1
-    option2Text: fd
+    text: DID YOU JUST THROW MY DWARVES OFF THE CLIFF???
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Oh....
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: The dwarves are my friends, not kidnappers!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: The bandits were actually good guys? This completely changes my perspective
+      on things!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: THIS CHANGES EVERYTHING!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
     Option2NextNodeIndex: -1
-    option3Text: gf
-    Option3NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &80968440914707004
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -158,13 +199,30 @@ MonoBehaviour:
   DoUpdate: 0
   DialogNodes:
   - character: 1
-    text: Ty ses jim vsem omluvil, nejsi tak hrozny
-    option1Text: de
-    Option1NextNodeIndex: -1
-    option2Text: 5e
+    text: You apologized to all the dwarves you threw down the cliff.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: Thank you, you're not actually a bad guy!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: The game actually needed a few gnomes to be knocked down the cliff for
+      the second half to make sense, you know.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
     Option2NextNodeIndex: -1
-    option3Text: fg
-    Option3NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &6598929290033145374
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -235,13 +293,30 @@ MonoBehaviour:
   DoUpdate: 0
   DialogNodes:
   - character: 1
-    text: Tys nikomu neublizil? My hero
-    option1Text: fd
-    Option1NextNodeIndex: -1
-    option2Text: as
+    text: There are so many so called heroes who throw my dwarves from the cliff...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: I didn't!
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: Thank you so much! But I really wonder what would happen if someone who
+      thought my dwarves are bad bandits and  defeated them.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: Hmm, I wonder...
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 1
+    text: That would definitely CHANGE EVERYTHING.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: I'm sure it would.
     Option2NextNodeIndex: -1
-    option3Text: fd
-    Option3NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &8333520617646656980
 SphereCollider:
   m_ObjectHideFlags: 0

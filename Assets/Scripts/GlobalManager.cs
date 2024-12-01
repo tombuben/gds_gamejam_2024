@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[DefaultExecutionOrder(-1111)]
 public class GlobalManager : MonoBehaviour
 {
     public static GlobalManager Instance;
@@ -36,6 +37,8 @@ public class GlobalManager : MonoBehaviour
     public bool SmudlaIsFollowing;
     public Action SmudlaStartedFollowing;
     public Action StopSmudlaFollowing;
+
+    public Action GameWon;
 
     void Awake()
     {

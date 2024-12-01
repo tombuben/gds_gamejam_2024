@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 
         globalManager.PlayerKilled += () => { KilledGnomesCount = 0; SavedGnomesCount = 0; UpdateScoreUI(); };
         globalManager.TrpaslikKilled += () => { KilledGnomesCount++; UpdateScoreUI(); };
-        globalManager.TrpaslikKilled += () => { SavedGnomesCount++; UpdateScoreUI(); };
+        globalManager.TrpaslikApologized += () => { SavedGnomesCount++; UpdateScoreUI(); };
         globalManager.OnTogglePerspective += (is3D) => { UpdateScoreUI(); };
     }
 

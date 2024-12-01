@@ -19,8 +19,9 @@ public class DialogInstance : MonoBehaviour
     public Action DialogFinishedSuccessfully;
     public Action DialogFinishedUnsuccessfully;
 
-    private void Start()
+    protected void Start()
     {
+        DoUpdate = false;
         CurrentDialogIndex = DialogStartIndex;
 
         DialogWindow = GlobalManager.Instance.DialogWindow;
@@ -31,7 +32,7 @@ public class DialogInstance : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CharacterController cc))
+        if (other.TryGetComponent(out CharacterControllerSwitcher cc))
         {
             DoUpdate = true;
         }
@@ -39,7 +40,7 @@ public class DialogInstance : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out CharacterController cc))
+        if (other.TryGetComponent(out CharacterControllerSwitcher cc))
         {
             DoUpdate = false;
         }
@@ -97,7 +98,7 @@ public class DialogInstance : MonoBehaviour
         }
     }
 
-    private void ShowCurrentNode()
+    protected void ShowCurrentNode()
     {
         if (CurrentDialogIndex < 0 || CurrentDialogIndex >= DialogNodes.Count)
         {

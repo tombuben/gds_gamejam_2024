@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[DefaultExecutionOrder(-1)]
 public class CharacterControllerSwitcher : MonoBehaviour
 {
     private CharacterController2D controller2D;
