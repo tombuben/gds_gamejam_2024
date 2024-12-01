@@ -10,6 +10,8 @@ public class MusicLoopper : MonoBehaviour
     [HideInInspector] public AudioSource musicAudioSource;
 
     bool loopIntroMusic = true;
+    public bool start3DMusic = false;
+    bool start3DMusicLoop = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +36,25 @@ public class MusicLoopper : MonoBehaviour
                 musicAudioSource.Play();
 
                 loopIntroMusic = false;
+            }
+        }
+        if (start3DMusic)
+        {
+            musicAudioSource.Stop();
+            musicAudioSource.loop = false;
+            musicAudioSource.resource = music3D;
+            musicAudioSource.Play();
+
+            start3DMusic = false;
+            start3DMusicLoop = true;
+        }
+        if (start3DMusicLoop)
+        {
+            if (!musicAudioSource.isPlaying)
+            {
+                musicAudioSource.resource = music3DLoop;
+                musicAudioSource.loop = true;
+                musicAudioSource.Play();
             }
         }
     }

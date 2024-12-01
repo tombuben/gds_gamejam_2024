@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PrincessManager : MonoBehaviour
 {
+    public GameObject musicManager;
+    public MusicLoopper musicLooper;
+
     public DialogInstance NoHurtDialog;
     public DialogInstance HurtDwarvesDailog;
     public DialogInstance ApologizedToAllDialog;
@@ -9,6 +12,8 @@ public class PrincessManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        musicLooper = musicManager.GetComponent<MusicLoopper>();
+
         NoHurtDialog.gameObject.SetActive(true);
         HurtDwarvesDailog.gameObject.SetActive(false);
         ApologizedToAllDialog.gameObject.SetActive(false);
@@ -34,6 +39,8 @@ public class PrincessManager : MonoBehaviour
 
     private void GoTo3D()
     {
+        musicLooper.start3DMusic = true;
+
         GlobalManager.Instance.GoTo3D(true);
     }
 
