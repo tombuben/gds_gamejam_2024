@@ -18,7 +18,7 @@ public class PlayerSoundMaker : MonoBehaviour
 
     private void TrpaslikKilled()
     {
-        AudioSource.PlayClipAtPoint(scoreSound, Camera.main.transform.position, volume: 0.5f);
+        AudioSource.PlayClipAtPoint(scoreSound, Camera.main.transform.position, volume: 0.1f);
     }
 
     private void PlayerKilled()
@@ -29,6 +29,6 @@ public class PlayerSoundMaker : MonoBehaviour
     private void Jumped()
     {
         var i = Random.Range(0, audioClips.Length);
-        AudioSource.PlayClipAtPoint(audioClips[i], Camera.main.transform.position, volume: 0.1f);
+        AudioSource.PlayClipAtPoint(audioClips[i], Camera.main.transform.position, volume: 0.02f); 
     }
 }
