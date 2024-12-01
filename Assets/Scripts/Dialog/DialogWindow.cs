@@ -47,6 +47,11 @@ public class DialogWindow : MonoBehaviour
                 selectedButton.onClick?.Invoke();
             }
         }
+
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            Option2.Select();
+        }
     }
 
     public void ShowText(CharacterEnum character, Sprite characterSprite, string text, Action<DialogOptions> callBack,
@@ -84,11 +89,11 @@ public class DialogWindow : MonoBehaviour
 
     private void OptionSelectedCallback(DialogOptions dialogOption)
     {
+        GlobalManager.Instance.OnDialogClosed?.Invoke();
         gameObject.SetActive(false);
 
         Callback?.Invoke(dialogOption);
 
-        GlobalManager.Instance.OnDialogClosed?.Invoke();
     }
 
     private Color GetCharacterColor(CharacterEnum character)

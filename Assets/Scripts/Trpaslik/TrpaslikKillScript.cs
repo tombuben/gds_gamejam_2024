@@ -6,6 +6,7 @@ using UnityEngine;
 public class TrpaslikKillScript : MonoBehaviour
 {
     private bool isDead = false;
+    [SerializeField] private GameObject killParticle;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -36,7 +37,8 @@ public class TrpaslikKillScript : MonoBehaviour
         GlobalManager.Instance.killCount += 1;
         GlobalManager.Instance.TrpaslikKilled?.Invoke();
         isDead = true;
-        
+
+        Instantiate(killParticle, gameObject.transform);
         Destroy(gameObject, 4f);
     }
 
