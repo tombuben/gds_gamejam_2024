@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FollowDwarf : MonoBehaviour
@@ -25,10 +26,17 @@ public class FollowDwarf : MonoBehaviour
     private void StopSmudlaFollowing()
     {
         following = false;
-        
+        destroyOnFinish.SetActive(false);
+
+        StartCoroutine(DelayScore());
+
+    }
+
+    IEnumerator DelayScore()
+    {
+        yield return new WaitForSeconds(0.5f);
         GlobalManager.Instance.apologizeCount += 1;
         GlobalManager.Instance.TrpaslikApologized?.Invoke();
-        destroyOnFinish.SetActive(false);
     }
 
     private void StartFollowing()
