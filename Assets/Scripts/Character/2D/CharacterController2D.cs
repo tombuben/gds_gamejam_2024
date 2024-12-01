@@ -18,9 +18,12 @@ public class CharacterController2D : MonoBehaviour
 
     private float _time;
 
+    private float depthZ;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        depthZ = transform.localPosition.z;
         characterController = GetComponent<CharacterController>();
     }
 
@@ -69,6 +72,9 @@ public class CharacterController2D : MonoBehaviour
         HandleGravity();
 
         characterController.Move(_frameVelocity);
+        Vector3 pos = transform.position;
+        pos.z = depthZ;
+        transform.position = pos;
     }
 
 
