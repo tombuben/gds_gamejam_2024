@@ -122,14 +122,22 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: potkali jsme se a nemas klobouk? wtf
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 8
+    text: Have you found my red pointy hat? <sniff>
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Sorry, ..., not yet
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!1 &3745423701921600029
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,14 +207,30 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: potkali jsme se a nasel jsi klobouk, aweesome
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 8
+    text: Have you found my red pointy hat?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Yes, and here it is!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: 'Thank you, mister. Snow White will be happy that I didn''t lose it again.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -10
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!1 &5513841118491318369
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,14 +312,118 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: Poprve jsme se potkali
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 8
+    text: Buhu buhu
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: Buhu buhu buhu
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: 'What happened to you, little fella?    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: Buhu, I fell from a cliff and now my red pointy hat is gone, buhu.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: Buhu buhu
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 5
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: That was my mistake. Accept my deepest apology.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Please.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 7
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: That is alright. mister. Not many things can hurt us.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: "But, <sniff>, I don\u2019t know where my pointy hat is?"
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 9
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Well that is smoothing I can help with!!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 10
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: You know where it is?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 11
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Well, ... no, ..., not exactly
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 12
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: But I avow to find it for you.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 13
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 8
+    text: <sniff>
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &4998606690699380675
 SphereCollider:
   m_ObjectHideFlags: 0

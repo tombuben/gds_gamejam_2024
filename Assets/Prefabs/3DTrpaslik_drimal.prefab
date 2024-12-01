@@ -48,14 +48,38 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: zarazene prdy
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
+  - character: 6
+    text: Mumble... uh... mmm...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Are you ok?
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: Mmm... uh... mmm...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: Uuu, I need someone to help me pull him out.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
     Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &4630281357003776692
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -209,14 +233,102 @@ MonoBehaviour:
   DialogStartIndex: 0
   DoUpdate: 0
   DialogNodes:
-  - character: 2
-    text: vytazene prdy
-    option1Text: jkh
-    Option1NextNodeIndex: -2
-    option2Text: jhg
-    Option2NextNodeIndex: -2
-    option3Text: jhgkjh
-    Option3NextNodeIndex: -1
+  - character: 0
+    text: 'I brought help, we are ready to save you. '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 1
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: Mmm... uh... mmm...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 2
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: I shall count to three, no more, no less.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 3
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Four shall not be counted, neither two, except if it proceeds to three.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 4
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: Five is right out.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 5
+    Option2NextNodeIndex: 0
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: Mmm... uh... mmm...
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 6
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: 'Eee, sorry. I got carried away a bit.    '
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 7
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 0
+    text: ONE
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 8
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: TWO
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 9
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: FIVE
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 10
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 3
+    text: WHAT!!!
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: 11
+    option3Text: 
+    Option3NextNodeIndex: 0
+  - character: 6
+    text: I MEANT THREE.
+    option1Text: 
+    Option1NextNodeIndex: 0
+    option2Text: 
+    Option2NextNodeIndex: -10
+    option3Text: 
+    Option3NextNodeIndex: 0
 --- !u!135 &7354303493855356496
 SphereCollider:
   m_ObjectHideFlags: 0
