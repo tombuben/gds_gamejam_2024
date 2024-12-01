@@ -65,6 +65,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _frameVelocity = characterController.velocity * Time.fixedDeltaTime;
         CheckCollisions();
 
         HandleJump();

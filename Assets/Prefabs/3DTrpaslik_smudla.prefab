@@ -156,8 +156,8 @@ MonoBehaviour:
   DoUpdate: 0
   DialogNodes:
   - character: 3
-    text: 
-    option1Text: 'Hi, what a terrible fate. What terrible luck.    '
+    text: 'Hi, what a terrible fate. What terrible luck.    '
+    option1Text: 
     Option1NextNodeIndex: 0
     option2Text: 
     Option2NextNodeIndex: 1
