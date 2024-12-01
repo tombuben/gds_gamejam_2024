@@ -32,6 +32,68 @@ Transform:
   - {fileID: 4867934138153068694}
   m_Father: {fileID: 5293062851328719345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3031337698271450280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5434060934089704357}
+  m_Layer: 0
+  m_Name: JumpVFXTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5434060934089704357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031337698271450280}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.373, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5293062851328719345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7523894310431829180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722392300727953424}
+  m_Layer: 0
+  m_Name: RunVFXTransfrom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722392300727953424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523894310431829180}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000000059604645, y: -0.688, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5293062851328719345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8290708335085475371
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +132,8 @@ Transform:
   m_Children:
   - {fileID: 2981437214041911768}
   - {fileID: 656522756639133246}
-  - {fileID: 1637493301620173717}
+  - {fileID: 5434060934089704357}
+  - {fileID: 722392300727953424}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1499782393607574043
@@ -92,7 +155,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.2
-  m_Radius: 0.4
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -113,6 +176,11 @@ MonoBehaviour:
   _stats: {fileID: 11400000, guid: 8a6e66444d0f740358374822de9a474b, type: 2}
   _animator: {fileID: 2635611646780693234}
   lookDirection: {x: 0, y: 0}
+  canSpawnRunVFX: 1
+  jumpVfx: {fileID: 672118191917504895, guid: 815f1f0340055d84f9083324871b9ed9, type: 3}
+  runVfx: {fileID: 3796285113449306278, guid: 58bdb73e30db76c43927b24ef6286a75, type: 3}
+  jumpVfxTransform: {fileID: 5434060934089704357}
+  runVfxTransform: {fileID: 722392300727953424}
 --- !u!114 &9152720624205473435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,58 +269,6 @@ MonoBehaviour:
     Option2NextNodeIndex: -1
     option3Text: Defeat the bandits
     Option3NextNodeIndex: -1
-  DialogTimeout: 0.3
---- !u!1 &8383391399888836816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1637493301620173717}
-  - component: {fileID: 6525920444934241884}
-  m_Layer: 7
-  m_Name: CharacterAudio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1637493301620173717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383391399888836816}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5293062851328719345}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6525920444934241884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383391399888836816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93e3ff08ead84279881f46664a94cd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 9f110f013401f42e996da5094d6f8b8b, type: 3}
-  - {fileID: 8300000, guid: 6bbad78f3ae884f7eb12946f2092c416, type: 3}
-  - {fileID: 8300000, guid: 1f56e0e0c59a24c44b9e56400c126bd3, type: 3}
-  - {fileID: 8300000, guid: 2be6ce6d61e6e43c3a8b27bf6f7b62bc, type: 3}
-  killedSound: {fileID: 8300000, guid: 3df59136337f44def8d005e65dd667be, type: 3}
-  scoreSound: {fileID: 8300000, guid: b14c4880ac119453497d1e90423d13e4, type: 3}
 --- !u!1001 &5958494053054123774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,10 +296,6 @@ PrefabInstance:
     - target: {fileID: 7322484321983543766, guid: a9b47abce7e404d3d80468063d1c5a0c, type: 3}
       propertyPath: m_Layer
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8849092046405419551, guid: a9b47abce7e404d3d80468063d1c5a0c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 8921881121437302566, guid: a9b47abce7e404d3d80468063d1c5a0c, type: 3}
       propertyPath: m_LocalPosition.x
