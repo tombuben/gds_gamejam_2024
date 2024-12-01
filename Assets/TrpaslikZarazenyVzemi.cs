@@ -31,7 +31,5 @@ public class TrpaslikZarazenyVzemi : MonoBehaviour
         ZatazenyGameObject.SetActive(false);
         VytazenyGameObject.SetActive(true);
         GlobalManager.Instance.StopSmudlaFollowing?.Invoke();
-        
-        // TODO add score
     }
 }
