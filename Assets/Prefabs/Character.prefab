@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2012342683258087103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.65, z: 0}
+  m_LocalPosition: {x: 0, y: -0.71, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8475605601365799240}
   - component: {fileID: 7119006014460364751}
   - component: {fileID: 5425213792135122047}
+  - component: {fileID: 1497543822618580816}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -176,6 +177,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1497543822618580816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290708335085475371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32410abb077a34e0b96684e5765e6b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogStartIndex: 0
+  DoUpdate: 0
+  DialogNodes:
+  - character: 0
+    text: Snow White was kidnapped! I have to defeat ALL the bandits and save her!
+    option1Text: Save the princess
+    Option1NextNodeIndex: -1
+    option2Text: Be a hero
+    Option2NextNodeIndex: -1
+    option3Text: Defeat the bandits
+    Option3NextNodeIndex: -1
 --- !u!1001 &5958494053054123774
 PrefabInstance:
   m_ObjectHideFlags: 0
