@@ -38,7 +38,7 @@ public class DialogWindow : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
         {
             Button selectedButton = EventSystem.current.currentSelectedGameObject?.GetComponent<Button>();
 
