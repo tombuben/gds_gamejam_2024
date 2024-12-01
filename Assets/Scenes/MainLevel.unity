@@ -1547,11 +1547,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef7d36b3e1249a4ebcdd61b9c1bf474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music2D: {fileID: 8300000, guid: 60170cd1ba72a994cbf3b2647b5202fe, type: 3}
+  music2D: {fileID: 8300000, guid: 5bf56ca3838229a4ea6961c0e417c1a8, type: 3}
   music2dLoop: {fileID: 8300000, guid: e1f538590311662468e2629ed3eb00a7, type: 3}
   music3D: {fileID: 8300000, guid: 2e6186d8ac1961b498855aab4dc74a44, type: 3}
   music3DLoop: {fileID: 8300000, guid: d6b225f92f0be994ca88612f6ed16c28, type: 3}
   musicAudioSource: {fileID: 0}
+  start3DMusic: 0
 --- !u!1001 &932587065
 PrefabInstance:
   m_ObjectHideFlags: 0
